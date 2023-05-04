@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>booking</title>
+   
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+     
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="booking-form" > 
+  
+   
+  <form class="forbooking"> <!--action="reservation.php" method="post" --> 
+    <div class="booking">
+     <label for="name">Your Name</label>
+     <input type="text" id="name" name="name" placeholder="type your name here"  required>
+   </div>
+   <div class="booking">
+     <label for="email">Your E-mail</label>
+     <input type="email" id="email" name="email" placeholder="email" required>
+   </div>
+     <div class="booking">
+     <label for="phone">Your Phone</label>
+     <input type="tel" id="phone" name="phone" placeholder="050-561-8630" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+   </div>
+   <hr>
+    
+    <div class="booking block">
+     <label for="Date for booking">Date for booking</label>
+     <input type="date" id="checkin-date" name="date" required>
+   </div>
+  <!-- <br> <br> <br> <br>  <br> <br> <br>-->
+    <div class="booking">
+     <label for="selection">Select your Preference</label>
+     <select id="room-selection" name="room_preference" required>
+         <option value="online">online</option>
+         <option value="face to face ">face to face</option>
+     </select>
+   </div>
+   <hr>
+   <div class="booking">
+     <label for="message">Anything Else?</label>
+     <textarea id="message" name="message" placeholder="Tell us anything else that might be important." required></textarea>
+   </div>
+   <button type="submit">Book a consultant</button>
+ </form>
+ 
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+</body>
+</html>

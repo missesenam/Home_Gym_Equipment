@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>register</title>
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="style.css">
+
+     <!-- but am not sure of the view counter   
+
+    <?php
+
+$counter_name = "counter.txt";
+
+// Check if a text file exists.
+// If not create one and initialize it to zero.
+if (!file_exists($counter_name)) {
+  $f = fopen($counter_name, "w");
+  fwrite($f,"0");
+  fclose($f);
+}
+
+// Read the current value of our counter file
+$f = fopen($counter_name,"r");
+$counterVal = fread($f, filesize($counter_name));
+fclose($f);
+
+// Has visitor been counted in this session?
+// If not, increase counter value by one
+if(!isset($_SESSION['hasVisited'])){
+  $_SESSION['hasVisited']="yes";
+  $counterVal++;
+  $f = fopen($counter_name, "w");
+  fwrite($f, $counterVal);
+  fclose($f);
+}
+
+echo "You are visitor number $counterVal to this site";
+?>
+--> 
+
+
+ <!-- captcha     
+    
+<?php 
+session_start();
+
+
+$first_num = rand(1, 10);
+$second_num = rand(1, 10);
+
+$operators = array("+", "-", "*");
+$operator = rand (0, count($operators) - 1);
+$operator = $operators[$operator];
+$answer = 0;
+switch($operator) {
+	case "+":
+	$answer = $first_num + $second_num;
+	break;
+	case "-":
+	$answer = $first_num - $second_num;
+	break;
+	case "*":
+	$answer = $first_num * $second_num;
+	break;
+}
+$_SESSION ["answer"] = $answer;
+
+?>
+ --> 
+
+</head>
+
+<body>
+    
+
+    <body class="registrationForm">
+        <div class="cont">
+        
+                  <div class="login">
+        
+        
+        <div class="loginT">
+            <h1 class="title">registration</h1>
+        
+            <form action="connect.php" method="post">
+
+                <div class="input1">
+                    <input type="text" placeholder="Enter your user name" name="userName" requiered>
+                    <i class="uil uil-user"></i>
+                </div>
+              
+                <div class="input1">
+                    <input type="text" placeholder="first name"  name="firstName" requiered>
+                
+                </div>
+
+                <div class="input1">
+                    <input type="text" placeholder="last name"   name="lastName"requiered>
+                
+                </div>
+
+
+                <div class="input1">
+                    <input type="text" placeholder="Email"  name="email" requiered>
+                <i class="uil uil-envelope icon"></i>
+                </div>
+
+                <div class="input1">
+                    <input type="password" class="passW" placeholder="password"  name="password" requiered>
+                    <i class="uil uil-padlock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+        
+                <div class="input1">
+                    <input type="password" class="passW" placeholder=" repeat password"  name="password" requiered>
+                    <i class="uil uil-padlock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+             
+
+                <div class="check">
+                    <div class="checkbox">
+                        <input type="checkbox" id="logcheck">
+                        <label for="logcheck" class="check1" id="color-this"> remember me</label>
+                    </div>
+                    <a href="#" class="check1"> forgot password</a>
+                </div>
+
+ 
+
+       
+ <div class="captcha">
+      <!-- 
+ <?php echo $first_num . "" . $operator . "" . $second_num . "=";
+  ?> --> 
+         <input type="number" name="answer"  >
+    </div>
+      
+ 
+
+        
+                <div class="input1 submit">
+                   <input type="submit"  value="sign Up" >
+              
+
+                </div>
+            </form>
+        
+            <div class="signIn">
+                <span id="signIn">you already have an account?
+                    <a href="logIn.html" class="check1">LogIn</a>
+                </span>
+            </div>
+        
+        </div>
+        
+        
+                  </div>
+        </div>
+        
+
+
+
+
+
+
+
+    <!--   <script src="javascript.js"></script>-->
+</body>
+</html>
